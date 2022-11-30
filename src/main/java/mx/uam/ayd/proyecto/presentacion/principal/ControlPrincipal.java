@@ -18,7 +18,7 @@ import mx.uam.ayd.proyecto.presentacion.consultarAvisos.ControlConsultarAvisos;
 import mx.uam.ayd.proyecto.presentacion.consultarCitas.ControlConsultarCitas;
 import mx.uam.ayd.proyecto.presentacion.crearPublicacion.ControlCrearPublicacion;
 import mx.uam.ayd.proyecto.presentacion.procesarTramites.ControlProcesarTramites;
-
+import mx.uam.ayd.proyecto.presentacion.administrador.ControlAdministrador;
 
 /**
  * Esta clase lleva el flujo de control de la ventana principal
@@ -66,6 +66,9 @@ public class ControlPrincipal {
 	private Agremiado agremiado;
 	
 	private Empleado empleado;
+
+	@Autowired
+	private ControlAdministrador controlAdministrador;
 	
 	//private RegistraEmpleado registraempleado;
 	
@@ -126,6 +129,11 @@ public class ControlPrincipal {
 		else if (empleado != null)
 			controlCrearPublicacion.inicia(empleado);
 
+	}
+
+	public void administrador(){
+		controlAdministrador.inicia();
+		
 	}
 	
 	public void RegistraEmpleado() {
