@@ -98,7 +98,7 @@ public class ControlPrincipal {
 	public void loginEmpleado() {
 		agremiado = null;
 		
-		empleado = repositoryEmpleado.findByTipoEmpleado("encargada");
+		empleado = repositoryEmpleado.findByTipoEmpleado("administrador");
 
 
 	}
@@ -132,8 +132,12 @@ public class ControlPrincipal {
 	}
 
 	public void administrador(){
-		controlAdministrador.inicia();
-		
+		if(empleado!=null){
+			String tipEmpleado = empleado.getTipoEmpleado();
+		    if(tipEmpleado.equals("administrador")){
+				controlAdministrador.inicia();
+		    }	
+		}	
 	}
 	
 	public void RegistraEmpleado() {

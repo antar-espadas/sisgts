@@ -215,7 +215,7 @@ public class ProyectoApplication {
 		empleado.setId(987654321);
 		empleado.setNombre("Yanely");
 		empleado.setApellidos("Bermejo Hernandez");
-		empleado.setTipoEmpleado("encargada");
+		empleado.setTipoEmpleado("administrador");
 		repositoryEmpleado.save(empleado);
 
 		var aviso1 = new Aviso();
