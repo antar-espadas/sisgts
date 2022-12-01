@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 @Component
 public class VentanaAdministrador extends Pantalla {
@@ -26,13 +28,33 @@ public class VentanaAdministrador extends Pantalla {
 		gbc_btnRegistrarEmpleado.gridx = 1;
 		gbc_btnRegistrarEmpleado.gridy = 1;
 		add(btnRegistrarEmpleado, gbc_btnRegistrarEmpleado);
+
+	btnRegistrarEmpleado.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//MUESTRA EL PANEL ANTERIOR
+				controlador.registraEmpleado();
+
+			}//FIN DEL METODO ACTION PERFORMED
+		});//FIN DEL ACTION LISTENER
+
+
 		
 		JButton btnRegistrarAgremiado = new JButton("Registrar Agremiado");
 		GridBagConstraints gbc_btnRegistrarAgremiado = new GridBagConstraints();
 		gbc_btnRegistrarAgremiado.gridx = 1;
 		gbc_btnRegistrarAgremiado.gridy = 3;
 		add(btnRegistrarAgremiado, gbc_btnRegistrarAgremiado);
+
+		btnRegistrarAgremiado.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//MUESTRA EL PANEL ANTERIOR
+				controlador.registraAgremiado();
+
+			}//FIN DEL METODO ACTION PERFORMED
+		});//FIN DEL ACTION LISTENER
 	}
+
+
 
     public void muestra(ControlAdministrador controlador){
         this.controlador=controlador;

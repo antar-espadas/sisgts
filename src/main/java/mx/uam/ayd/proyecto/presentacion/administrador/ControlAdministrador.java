@@ -30,5 +30,3 @@ public class ControlAdministrador {
         controlRegistraAgremiado.inicia();
     }
 }
-
-//Hola, cómo estás?xdxdxd

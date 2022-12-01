@@ -193,16 +193,18 @@ public class VentanaRegistraAgremiado extends JFrame {
 			contentPane1.add(btnSiguiente);//contentPane.add(btnSiguiente);
 			btnSiguiente.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+					muestraPaso3();
+					if (true) return;
 					if(e.getSource()==btnSiguiente) {
 						//VERIFICA QUE LOS CAMPOS NO ESTEN VACIOS Y SI ES ASI NO DEJA AVANZAR
 						if(textFieldNombre.getText().equals("") || textFieldApellido.getText().equals("")||textFieldClave.getText().equals("")||textFieldFiliacion.getText().equals("")) {
 						muestraDialogoConMensaje("Ningun campo debe estar vacio");
 					}else {//MUESTRA EL SIGUIENTE PANEL
-						control.RecuperaClave(textFieldClave.getText());
+						//control.RecuperaClave(textFieldClave.getText());
 						//control.Recupera(textFieldNombre.getText(), textFieldApellido.getText());
 						/*contentPane1.setVisible(false);
 						contentSig.setVisible(true);*/
-						if(control.existe==0) {
+						if(true) {
 							contentPane1.setVisible(false);
 						    contentSig.setVisible(true);
 							/*contentPane1.setVisible(false);
@@ -275,8 +277,8 @@ public class VentanaRegistraAgremiado extends JFrame {
 						}else {
 						//VERIFICA QUE LOS CAMPOS DE CONTRASEÑA Y DE CORREO COINCIDAN
 						if(textFieldCorreo.getText().equals(textFieldConfiCorreo.getText()) && textFieldContrasenia.getText().equals(textFieldConfiContrasenia.getText())) {
-							control.recuperaCorreo(textFieldCorreo.getText());
-							if(control.verifica==0) {
+							//control.recuperaCorreo(textFieldCorreo.getText());
+							if(true) {
 								control.RegistraAgremiado(textFieldNombre.getText(), textFieldApellido.getText(), textFieldClave.getText(), textFieldFiliacion.getText(), textFieldAdscripcion.getText(), textFieldPuesto.getText(), textFieldDomicilio.getText(), textFieldTurno.getText(),textFieldCelular.getText(),textFieldTelefono.getText(), textFieldCentrodetrabajo.getText(), textFieldCorreo.getText(), textFieldContrasenia.getText());
 						        contentPane1.setVisible(true);
 						        contentSig.setVisible(false);
@@ -507,7 +509,27 @@ public class VentanaRegistraAgremiado extends JFrame {
 
 			}
 
-		/*DefaultComboBoxModel <String> comboBoxModel = new DefaultComboBoxModel <>();
+			public void muestraPaso2(){
+				contentPane1.setVisible(false);
+				contentSig.setVisible(true);
+				content3.setVisible(false);
+				content4.setVisible(false);
+			}
+
+	       public void muestraPaso3(){
+			   contentPane1.setVisible(false);
+			   contentSig.setVisible(false);
+			   content3.setVisible(true);
+			   content4.setVisible(false);
+			}
+
+			public void muestraPaso4(){
+				contentPane1.setVisible(false);
+				contentSig.setVisible(false);
+				content3.setVisible(false);
+				content4.setVisible(true);
+			}
+			/*DefaultComboBoxModel <String> comboBoxModel = new DefaultComboBoxModel <>();
 			
 			
 			for(Grupo grupo:grupos) {

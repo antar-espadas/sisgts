@@ -1,23 +1,12 @@
 package mx.uam.ayd.proyecto.negocio;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
-
-import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-
-import mx.uam.ayd.proyecto.datos.RepositoryUsuario;
-import mx.uam.ayd.proyecto.negocio.modelo.Usuario;
-import mx.uam.ayd.proyecto.negocio.ServicioUsuario;
 
 @ExtendWith(MockitoExtension.class)
 class ServicioUsuarioTest {

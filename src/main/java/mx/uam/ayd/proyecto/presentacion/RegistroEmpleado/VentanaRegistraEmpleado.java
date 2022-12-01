@@ -164,10 +164,10 @@ public class VentanaRegistraEmpleado extends JFrame {
 						muestraDialogoConMensaje("Ningun campo debe estar vacio");
 					}else {//MUESTRA EL SIGUIENTE PANEL
 						//control.Recupera1(textFieldNombre.getText(), textFieldApellido.getText());
-						control.Recuperaid(textFieldIdEmpleado.getText());
+						//control.Recuperaid(textFieldIdEmpleado.getText());
 						/*contentPane1.setVisible(false);
 					    contentSig.setVisible(true);*/
-						if(control.existe==0) {
+						if(true) {
 							contentPane1.setVisible(false);
 						    contentSig.setVisible(true);
 						}else {
@@ -190,9 +190,9 @@ public class VentanaRegistraEmpleado extends JFrame {
 						}else {
 						//VERIFICA QUE LOS CAMPOS DE CONTRASEÑA Y DE CORREO COINCIDAN
 						if(textFieldCorreo.getText().equals(textFieldConfiCorreo.getText()) && textFieldContrasenia.getText().equals(textFieldConfiContrasenia.getText())) {
-					    control.recuperaCorreo(textFieldCorreo.getText());
+					    //control.recuperaCorreo(textFieldCorreo.getText());
 					    if(control.verifica==0) {
-					    	control.RegistraEmpleado(textFieldIdEmpleado.getText(), textFieldNombre.getText(), textFieldApellido.getText(), textFieldTempleado.getText(), textFieldCorreo.getText(), textFieldContrasenia.getText());
+					    	//control.RegistraEmpleado(textFieldIdEmpleado.getText(), textFieldNombre.getText(), textFieldApellido.getText(), textFieldTempleado.getText(), textFieldCorreo.getText(), textFieldContrasenia.getText());
 					        //control.termina();
 					    	contentPane1.setVisible(true);
 					        contentSig.setVisible(false);
