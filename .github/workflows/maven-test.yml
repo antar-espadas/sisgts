@@ -11,6 +11,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '*'
+          distribution: 'openjdk'
       - name: Install Maven
         run: sudo apt-get install maven
       - name: Run Maven test
