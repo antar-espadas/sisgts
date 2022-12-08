@@ -7,11 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up JDK
-        uses: actions/setup-java@v1
+      - name: Set up latest JDK
+        uses: actions/setup-java@v2
         with:
           java-version: '*'
       - name: Install Maven
         run: sudo apt-get install maven
-      - name: Run Maven test
-        run: mvn test
+      - name: Run Maven
